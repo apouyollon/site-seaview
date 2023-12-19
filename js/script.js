@@ -237,6 +237,8 @@ document.getElementById('devisForm').addEventListener('submit', function(event) 
     
     // Récupérer les valeurs des champs
     const nomSociete = document.getElementById('nomSociete').value;
+    const prenom = document.getElementById('prenom').value;
+    const nom = document.getElementById('nom').value;
     const telephone = document.getElementById('telephone').value;
     const email = document.getElementById('email').value;
     const description = document.getElementById('description').value;
@@ -245,6 +247,8 @@ document.getElementById('devisForm').addEventListener('submit', function(event) 
     // Création d'un objet FormData pour envoyer les données et la pièce jointe
     const formData = new FormData();
     formData.append('nomSociete', nomSociete);
+    formData.append('prenom', prenom);
+    formData.append('nom', nom);
     formData.append('telephone', telephone);
     formData.append('email', email);
     formData.append('description', description);
