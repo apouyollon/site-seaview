@@ -221,45 +221,6 @@ function submit_form() {
     */
 }
 
-document.getElementById('devisForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêche le formulaire de se soumettre
-    
-    // Récupérer les valeurs des champs
-    const nomSociete = document.getElementById('nomSociete').value;
-    const prenom = document.getElementById('prenom').value;
-    const nom = document.getElementById('nom').value;
-    const telephone = document.getElementById('telephone').value;
-    const email = document.getElementById('email').value;
-    const description = document.getElementById('description').value;
-    const pieceJointe = document.getElementById('pieceJointe').files[0]; // Récupère le fichier
-    
-    // Création d'un objet FormData pour envoyer les données et la pièce jointe
-    const formData = new FormData();
-    formData.append('nomSociete', nomSociete);
-    formData.append('prenom', prenom);
-    formData.append('nom', nom);
-    formData.append('telephone', telephone);
-    formData.append('email', email);
-    formData.append('description', description);
-    formData.append('pieceJointe', pieceJointe);
-    
-    
-    
-    fetch('seaview.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        if (response.ok) {
-            alert('Devis envoyé avec succès ! Nous vous contacterons bientôt.');
-        } else {
-            alert('Une erreur est survenue lors de l\'envoi du devis.');
-        }
-    })
-    .catch(error => {
-        console.error('Erreur lors de l\'envoi du devis:', error);
-        alert('Une erreur est survenue lors de l\'envoi du devis.');
-    });
-  });
+
 show_equipe();
 show_services();
