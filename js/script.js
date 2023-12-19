@@ -149,61 +149,50 @@ function show_services() {
 
         $('#list_btn_services').append(title_service);
 
-        let content_service = `
+        /* let content_service = `
         <section class='content_service service_`+ services_database[e].id +`'>
             <p class='service_paragraph'> `+ services_database[e].description_service +`</p>
-            <img class='service_image' 
+            <img class='service_image imageservice_`+ services_database[e].id +`' 
             onmouseover='change_image_to_mockup(`+ services_database[e].id +`)' 
             onmouseleave='change_mockup_to_image(`+ services_database[e].id +`)' 
             src='`+ services_database[e].src_image +`' 
             alt='`+ services_database[e].alt_image +`'>
+        </section>`; */
+
+        let content_service = `
+        <section class='content_service service_`+ services_database[e].id +`'>
+            <p class='service_paragraph'> `+ services_database[e].description_service +`</p>
+            <div class='img_container'>
+                <img class='service_image imageservice_`+ services_database[e].id +`' 
+                onmouseover='change_image_to_mockup(`+ services_database[e].id +`)'  
+                src='`+ services_database[e].src_image +`' 
+                alt='`+ services_database[e].alt_image +`'>
+                <img class='service_image mockup_image mockupservice_`+ services_database[e].id +`' 
+                onmouseleave='change_mockup_to_image(`+ services_database[e].id +`)'
+                    src='`+ services_database[e].src_mockup +`' 
+                    alt='`+ services_database[e].alt_mockup +`'>
+            </div>
         </section>`;
 
         $('#list_services').append(content_service);
     }
 
     $('.content_service').hide();
+    $('.mockup_image').hide();
 }
 
 function show_description_service(p_id) {
-
     $('.content_service').hide();
-    $('.sercice_' + p_id).slideToggle(500);
-
-
-    /* let paragraph_service =`
-    <p class="description_service service_`+ services_database[p_id].id +`">
-    `+ services_database[p_id].description_service +`</p>`;
-
-    $('#paragraphe_service').html(paragraph_service);
-
-    $('#image_mockup').attr('onmouseover',`change_image_to_mockup(`+ p_id +`)`);
-    $('#image_mockup').attr('onmouseleave',`change_mockup_to_image(`+ p_id +`)`);
-    $('#image_mockup').attr('src', services_database[p_id].src_image);
-    $('#image_mockup').attr('alt', services_database[p_id].alt_image);
-
-    $('#div_mockup').slideToggle(500); */
+    $('.service_' + p_id).slideToggle(500);
 } 
 
 function change_image_to_mockup(p_id) {
-    /* let mockup = `
-    <img src="`+ services_database[p_id].src_mockup +`" 
-    alt="`+ services_database[p_id].alt_mockup +`">`;
-
-    $('#image_mockup').attr().fadeIn(500); */
-    $('#image_mockup').removeAttr('src');
-    $('#image_mockup').removeAttr('alt');
-
-    $('#image_mockup').attr('src', services_database[p_id].src_mockup);
-    $('#image_mockup').attr('alt', services_database[p_id].alt_mockup);
+    $('.mockupservice_' + p_id).fadeIn(500);
+    console.log('faded');
 }
 
 function change_mockup_to_image(p_id) {
-    $('#image_mockup').removeAttr('src');
-    $('#image_mockup').removeAttr('alt');
-
-    $('#image_mockup').attr('src', services_database[p_id].src_image);
-    $('#image_mockup').attr('alt', services_database[p_id].alt_image);
+    $('.mockupservice_' + p_id).fadeOut(500);
 }
 
 function show_avis() {
