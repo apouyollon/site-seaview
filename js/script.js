@@ -128,6 +128,7 @@ function show_equipe() {
                 <h3>`+ equipe_database[e].nom_equipier +`</h3>
                 <h4>`+ equipe_database[e].fonction_equipier +`</h4>
                 <p>`+ equipe_database[e].description_equipier +`</p>
+            </div>
         </section>`;
 
         $('#notre_equipe').append(equipier);
@@ -156,6 +157,22 @@ function show_description_service(p_id) {
         else {
             $('.service_' + e).slideUp(500); 
         }
+    }
+}
+
+function show_avis() {
+    for (let e=0; e<avis_database.length; e++) {
+        let avis = `
+        <section class='avis'>
+        <img src='`+ equipe_database[e].photo_equipier +`' 
+        alt='`+ equipe_database[e].nom_equipier +`' - '`+ equipe_database[e].fonction_equipier_equipier +`'
+        title='`+ equipe_database[e].nom_equipier +`' - '`+ equipe_database[e].fonction_equipier_equipier +`'>
+            <div class='equipier_content'>
+                <h3>`+ equipe_database[e].nom_equipier +`</h3>
+                <h4>`+ equipe_database[e].fonction_equipier +`</h4>
+                <p>`+ equipe_database[e].description_equipier +`</p>
+            </div>
+    </section>`;
     }
 }
 

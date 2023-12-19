@@ -1,36 +1,36 @@
 p, .cta {
-  font-family: Verdana;
+  font-family: Inter;
   font-size: 1rem;
   font-weight: normal;
   color: black;
 }
 
 .description {
-  font-family: Verdana;
+  font-family: Inter;
   font-size: 0.75rem;
   font-weight: normal;
   color: white;
 }
 
 h3 {
-  font-family: Verdana;
+  font-family: Inter;
   font-size: 1.5rem;
   font-weight: normal;
-  color: rgb(203, 197, 240);
+  color: #282144;
 }
 
 h2 {
-  font-family: Verdana;
-  font-size: 1.75rem;
+  font-family: Inter;
+  font-size: 2rem;
   font-weight: normal;
   color: black;
 }
 
 h1 {
-  font-family: Verdana;
-  font-size: 2rem;
+  font-family: Inter;
+  font-size: 2.5rem;
   font-weight: 400;
-  color: rgb(203, 197, 240);
+  color: #282144;
 }
 
 body {
@@ -39,18 +39,25 @@ body {
 
 header {
   padding: 2% 3% 2% 3%;
-  background-color: rgb(90, 90, 90);
+  background-color: #7168c1;
+}
+
+h2 {
+  align-self: center;
 }
 
 .bar {
   margin: 40px 0px 40px 0px;
   height: 5px;
   width: 70%;
-  background-color: rgb(90, 90, 90);
+  background-color: #7168c1;
 }
 
 #presentation {
   padding: 0% 3% 0% 3%;
+}
+#presentation p, #presentation .cta {
+  margin-bottom: -20px;
 }
 
 #section_formation {
@@ -93,11 +100,12 @@ header {
   display: flex;
   flex-direction: column;
   width: 250px;
-  background-color: rgb(248, 236, 221);
+  border: 4px #7168c1 solid;
   margin-bottom: 75px;
+  border-radius: 15px;
 }
 .equipier p, .equipier .cta {
-  font-size: 0.65em;
+  font-size: 0.75em;
 }
 .equipier img {
   width: 10em;
@@ -113,6 +121,7 @@ header {
 
 .description_service {
   padding: 2% 0% 2% 0%;
+  width: 40%;
 }
 
 .section_project {
@@ -121,8 +130,8 @@ header {
   justify-content: space-between;
   width: 350px;
   margin-bottom: 5%;
-  background-color: rgb(90, 90, 90);
-  border: 10px rgb(90, 90, 90) solid;
+  background-color: #7168c1;
+  border: 10px #7168c1 solid;
 }
 
 .section_langage {
@@ -147,13 +156,13 @@ header {
   color: white;
   border-radius: 20px;
   padding: 2% 5% 2% 5%;
-  background: rgb(146, 130, 238);
+  background: #282144;
   margin: 5%;
 }
 
 .cta:hover {
-  background: rgb(203, 197, 240);
-  color: rgb(90, 90, 90);
+  background: #282144;
+  color: #7168c1;
 }
 
 .container {
