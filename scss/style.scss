@@ -98,31 +98,29 @@ header {
 }
 
 .description_service {
-    padding : 2% 0% 2% 0%;
-    width : 40%;
+    padding : 20px 0px 20px 0px;
 }
 
-.section_project {
+#services {
     display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width:350px;
-    margin-bottom: 5%;
-    background-color: color.$color_secondary;
-    border:10px color.$color_secondary solid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+    img {
+        width: 25em;
+        height:auto;
+    }
 }
 
-.section_langage {
-    padding: 0% 5% 0% 5%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+#list_services {
+    width:50%;
 }
 
-.project_content {
-    padding: 0% 5% 0% 5%;
+#div_mockup {
+    width:40%;
 }
-
 
 .box_cta {
     display:flex;

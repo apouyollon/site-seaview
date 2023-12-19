@@ -53,7 +53,11 @@ let services_database = [
     {
         'nom_service': 'Conception et refonte de sites web',
         'description_service': "Les entreprises possédant un site bien construit ont tendance à attirer davantage de clients. Un site web esthétique, sécurisé et régulièrement mis à jour montre une entreprise fiable et sérieuse.<br><br>Chez Seaview, nous vous proposons des sites web responsifs, fluides et aérés. Selon vos besoins, nous pouvons vous proposer un site construit sur le CMS Wordpress ou le coder intégralement. Nous vous accompagnons dans le choix d'un hébergeur, inclus dans nos tarifs. Conscients des inégalités d'accès à Internet, nous plaçons l'accessibilité web au coeur de nos priorités.",
-        'id': 0
+        'id': 0,
+        'src_image': "assets/projects/project-0.jpg",
+        'alt_image': "Atelier Rémi Levent",
+        'src_mockup': "assets/projects/mockup-0.png",
+        'alt_mockup': "Mockup Atelier Rémi Levent"
     },
     {
         'nom_service': "Création d'identité visuelle",
@@ -150,6 +154,7 @@ function show_services() {
 }
 
 function show_description_service(p_id) {
+    $('#div_mockup').fadeOut(200);
     for (let e=0; e<services_database.length; e++) {
         if (e == p_id) {
             $('.service_' + p_id).slideToggle(500);
@@ -158,6 +163,20 @@ function show_description_service(p_id) {
             $('.service_' + e).slideUp(500); 
         }
     }
+    let image = `
+    <img onmouseover='change_image_to_mockup(`+ p_id +`)' 
+    src="`+ services_database[p_id].src_image +`" 
+    alt="`+ services_database[p_id].alt_image +`">`;
+
+    $('#div_mockup').html(image).fadeIn(500);
+}
+
+function change_image_to_mockup(p_id) {
+    let mockup = `
+    <img src="`+ services_database[p_id].src_mockup +`" 
+    alt="`+ services_database[p_id].alt_mockup +`">`;
+
+    $('#div_mockup').html(mockup).fadeIn(500);
 }
 
 function show_avis() {
