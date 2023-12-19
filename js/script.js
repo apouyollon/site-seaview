@@ -263,23 +263,23 @@ document.getElementById('devisForm').addEventListener('submit', function(event) 
     formData.append('description', description);
     formData.append('pieceJointe', pieceJointe);
     
-    // Envoi des données à votre serveur avec Fetch ou XMLHttpRequest
-    // Ici, nous affichons juste un message pour simuler l'envoi
-    fetch('/votre-endpoint-de-traitement', {
-      method: 'POST',
-      body: formData
+    
+    
+    fetch('seaview.php', {
+        method: 'POST',
+        body: formData
     })
     .then(response => {
-      if (response.ok) {
-        alert('Devis envoyé avec succès ! Nous vous contacterons bientôt.');
-      } else {
-        alert('Une erreur est survenue lors de l\'envoi du devis.');
-      }
+        if (response.ok) {
+            alert('Devis envoyé avec succès ! Nous vous contacterons bientôt.');
+        } else {
+            alert('Une erreur est survenue lors de l\'envoi du devis.');
+        }
     })
     .catch(error => {
-      console.error('Erreur lors de l\'envoi du devis:', error);
-      alert('Une erreur est survenue lors de l\'envoi du devis.');
+        console.error('Erreur lors de l\'envoi du devis:', error);
+        alert('Une erreur est survenue lors de l\'envoi du devis.');
     });
-  });
+});
 show_equipe();
 show_services();
