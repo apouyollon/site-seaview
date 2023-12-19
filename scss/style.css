@@ -223,3 +223,21 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #0056b3;
 }
+.title_service {
+  display: inline-block;
+  padding: 3px 6px; /* 3px en haut/bas, 6px à gauche/droite */
+  background-color: #282144;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  padding-top:30px;
+}
+
+.title_service:hover {
+  background-color: #7168c1;
+}
