@@ -140,16 +140,6 @@ function show_equipe() {
 }
 
 function show_services() {
-    /* for (let e=0; e<services_database.length; e++) {
-
-        let service =`
-        <dt class="title_service" onclick="show_description_service(`+ services_database[e].id +`)">
-        `+ services_database[e].nom_service +`</dt>
-            <dd class="description_service service_`+ services_database[e].id +`">
-            `+ services_database[e].description_service +`</dd>`;
-
-        $('#list_services').append(service);
-    } */
 
     for (let e=0; e<services_database.length; e++) {
 
@@ -157,42 +147,42 @@ function show_services() {
         <btn class="title_service" onclick="show_description_service(`+ services_database[e].id +`)">
         `+ services_database[e].nom_service +`</btn>`;
 
-        $('#list_services').append(title_service);
+        $('#list_btn_services').append(title_service);
+
+        let content_service = `
+        <section class='content_service service_`+ services_database[e].id +`'>
+            <p class='service_paragraph'> `+ services_database[e].description_service +`</p>
+            <img class='service_image' 
+            onmouseover='change_image_to_mockup(`+ services_database[e].id +`)' 
+            onmouseleave='change_mockup_to_image(`+ services_database[e].id +`)' 
+            src='`+ services_database[e].src_image +`' 
+            alt='`+ services_database[e].alt_image +`'>
+        </section>`;
+
+        $('#list_services').append(content_service);
     }
 
-    $('#div_mockup').hide();
+    $('.content_service').hide();
 }
 
 function show_description_service(p_id) {
-    // $('#div_mockup').fadeOut(200);
 
-    let paragraph_service =`
+    $('.content_service').hide();
+    $('.sercice_' + p_id).slideToggle(500);
+
+
+    /* let paragraph_service =`
     <p class="description_service service_`+ services_database[p_id].id +`">
     `+ services_database[p_id].description_service +`</p>`;
 
     $('#paragraphe_service').html(paragraph_service);
-
-    /* let image = `
-    <img onmouseover='change_image_to_mockup(`+ p_id +`)' 
-    src="`+ services_database[p_id].src_image +`" 
-    alt="`+ services_database[p_id].alt_image +`">`; */
 
     $('#image_mockup').attr('onmouseover',`change_image_to_mockup(`+ p_id +`)`);
     $('#image_mockup').attr('onmouseleave',`change_mockup_to_image(`+ p_id +`)`);
     $('#image_mockup').attr('src', services_database[p_id].src_image);
     $('#image_mockup').attr('alt', services_database[p_id].alt_image);
 
-    $('#div_mockup').slideToggle(500);
-    /* for (let e=0; e<services_database.length; e++) {
-        if (e == p_id) {
-            $('.service_' + p_id).slideToggle(500);
-            $('#image_mockup').slideToggle(500);
-            }
-
-        else {
-            $('.service_' + e).slideUp(500); 
-        }
-    }*/
+    $('#div_mockup').slideToggle(500); */
 } 
 
 function change_image_to_mockup(p_id) {
@@ -241,6 +231,7 @@ function submit_form() {
     entrées = null
     */
 }
+
 document.getElementById('devisForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Empêche le formulaire de se soumettre
     
@@ -277,5 +268,6 @@ document.getElementById('devisForm').addEventListener('submit', function(event) 
       alert('Une erreur est survenue lors de l\'envoi du devis.');
     });
   });
+
 show_equipe();
 show_services();
