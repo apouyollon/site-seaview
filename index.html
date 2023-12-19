@@ -62,15 +62,19 @@
         </section>
 <section>
     <section>
-        <h2>Formulaire de Devis - Entreprise de Communication</h2>
+        <h2>Formulaire de Devis</h2>
         <form id="devisForm" enctype="multipart/form-data">
+            <div class="input-group">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+              </div>
           <div class="input-group">
             <label for="nomSociete">Nom de la Société :</label>
             <input type="text" id="nomSociete" name="nomSociete" required>
           </div>
           <div class="input-group">
             <label for="telephone">Téléphone :</label>
-            <input type="tel" id="telephone" name="telephone" required>
+            <input type="tel" id="telephone" name="telephone" >
           </div>
           <div class="input-group">
             <label for="email">Email :</label>
@@ -82,7 +86,7 @@
           </div>
           <div class="input-group">
             <label for="pieceJointe">Pièce Jointe :</label>
-            <input type="file" id="pieceJointe" name="pieceJointe" accept=".pdf,.doc,.docx,.txt" required>
+            <input type="file" id="pieceJointe" name="pieceJointe" accept=".pdf,.doc,.docx,.txt" >
           </div>
           <button type="submit">Envoyer</button>
         </form>
