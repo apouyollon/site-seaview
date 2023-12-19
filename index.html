@@ -62,30 +62,30 @@
         </section>
 <section>
     <section>
-          <h1>Formulaire de Devis - Entreprise de Communication</h1>
-          <form id="devisForm">
-            <div class="input-group">
-              <label for="nom">Nom :</label>
-              <input type="text" id="nom" name="nom" required>
-            </div>
-            <div class="input-group">
-              <label for="email">Email :</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="input-group">
-              <label for="telephone">Téléphone :</label>
-              <input type="tel" id="telephone" name="telephone" required>
-            </div>
-            <div class="input-group">
-              <label for="description">Description des besoins :</label>
-              <textarea id="description" name="description" rows="4" required></textarea>
-            </div>
-            <div class="input-group">
-              <label for="budget">Budget prévu :</label>
-              <input type="number" id="budget" name="budget" required>
-            </div>
-            <button type="submit">Envoyer</button>
-          </form>
+        <h2>Formulaire de Devis - Entreprise de Communication</h2>
+        <form id="devisForm" enctype="multipart/form-data">
+          <div class="input-group">
+            <label for="nomSociete">Nom de la Société :</label>
+            <input type="text" id="nomSociete" name="nomSociete" required>
+          </div>
+          <div class="input-group">
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required>
+          </div>
+          <div class="input-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="input-group">
+            <label for="description">Description du Projet :</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+          </div>
+          <div class="input-group">
+            <label for="pieceJointe">Pièce Jointe :</label>
+            <input type="file" id="pieceJointe" name="pieceJointe" accept=".pdf,.doc,.docx,.txt" required>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
           
 </section>
 

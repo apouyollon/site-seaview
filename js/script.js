@@ -244,24 +244,37 @@ document.getElementById('devisForm').addEventListener('submit', function(event) 
     event.preventDefault(); // Empêche le formulaire de se soumettre
     
     // Récupérer les valeurs des champs
-    const nom = document.getElementById('nom').value;
-    const email = document.getElementById('email').value;
+    const nomSociete = document.getElementById('nomSociete').value;
     const telephone = document.getElementById('telephone').value;
+    const email = document.getElementById('email').value;
     const description = document.getElementById('description').value;
-    const budget = document.getElementById('budget').value;
+    const pieceJointe = document.getElementById('pieceJointe').files[0]; // Récupère le fichier
     
-    // Vous pouvez utiliser ces valeurs pour générer le devis ou les envoyer à votre système de gestion
-    console.log('Nom:', nom);
-    console.log('Email:', email);
-    console.log('Téléphone:', telephone);
-    console.log('Description des besoins:', description);
-    console.log('Budget prévu:', budget);
+    // Création d'un objet FormData pour envoyer les données et la pièce jointe
+    const formData = new FormData();
+    formData.append('nomSociete', nomSociete);
+    formData.append('telephone', telephone);
+    formData.append('email', email);
+    formData.append('description', description);
+    formData.append('pieceJointe', pieceJointe);
     
-    // Ici, vous pouvez envoyer les données à votre serveur ou traiter le devis d'une manière appropriée
-    // Par exemple, avec JavaScript, vous pouvez utiliser Fetch ou Axios pour envoyer les données à un serveur
-      
-    // Pour cet exemple, nous afficherons simplement un message de confirmation
-    alert('Devis envoyé avec succès ! Nous vous contacterons bientôt.');
+    // Envoi des données à votre serveur avec Fetch ou XMLHttpRequest
+    // Ici, nous affichons juste un message pour simuler l'envoi
+    fetch('/votre-endpoint-de-traitement', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Devis envoyé avec succès ! Nous vous contacterons bientôt.');
+      } else {
+        alert('Une erreur est survenue lors de l\'envoi du devis.');
+      }
+    })
+    .catch(error => {
+      console.error('Erreur lors de l\'envoi du devis:', error);
+      alert('Une erreur est survenue lors de l\'envoi du devis.');
+    });
   });
 show_equipe();
 show_services();
