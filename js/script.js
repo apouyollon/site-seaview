@@ -240,6 +240,28 @@ function submit_form() {
     entrées = null
     */
 }
-
+document.getElementById('devisForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche le formulaire de se soumettre
+    
+    // Récupérer les valeurs des champs
+    const nom = document.getElementById('nom').value;
+    const email = document.getElementById('email').value;
+    const telephone = document.getElementById('telephone').value;
+    const description = document.getElementById('description').value;
+    const budget = document.getElementById('budget').value;
+    
+    // Vous pouvez utiliser ces valeurs pour générer le devis ou les envoyer à votre système de gestion
+    console.log('Nom:', nom);
+    console.log('Email:', email);
+    console.log('Téléphone:', telephone);
+    console.log('Description des besoins:', description);
+    console.log('Budget prévu:', budget);
+    
+    // Ici, vous pouvez envoyer les données à votre serveur ou traiter le devis d'une manière appropriée
+    // Par exemple, avec JavaScript, vous pouvez utiliser Fetch ou Axios pour envoyer les données à un serveur
+      
+    // Pour cet exemple, nous afficherons simplement un message de confirmation
+    alert('Devis envoyé avec succès ! Nous vous contacterons bientôt.');
+  });
 show_equipe();
 show_services();
