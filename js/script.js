@@ -241,6 +241,41 @@ function submit_form() {
     entrées = null
     */
 }
-
+document.getElementById('devisForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche le formulaire de se soumettre
+    
+    // Récupérer les valeurs des champs
+    const nomSociete = document.getElementById('nomSociete').value;
+    const telephone = document.getElementById('telephone').value;
+    const email = document.getElementById('email').value;
+    const description = document.getElementById('description').value;
+    const pieceJointe = document.getElementById('pieceJointe').files[0]; // Récupère le fichier
+    
+    // Création d'un objet FormData pour envoyer les données et la pièce jointe
+    const formData = new FormData();
+    formData.append('nomSociete', nomSociete);
+    formData.append('telephone', telephone);
+    formData.append('email', email);
+    formData.append('description', description);
+    formData.append('pieceJointe', pieceJointe);
+    
+    // Envoi des données à votre serveur avec Fetch ou XMLHttpRequest
+    // Ici, nous affichons juste un message pour simuler l'envoi
+    fetch('/votre-endpoint-de-traitement', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Devis envoyé avec succès ! Nous vous contacterons bientôt.');
+      } else {
+        alert('Une erreur est survenue lors de l\'envoi du devis.');
+      }
+    })
+    .catch(error => {
+      console.error('Erreur lors de l\'envoi du devis:', error);
+      alert('Une erreur est survenue lors de l\'envoi du devis.');
+    });
+  });
 show_equipe();
 show_services();
