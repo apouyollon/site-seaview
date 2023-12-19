@@ -1,0 +1,12 @@
+@use 'color';
+@use 'font';
+
+//mixin pour créer un bouton
+@mixin cta($width_btn:10em) {
+    text-decoration: none;
+    @extend p; // utilisation de l'attribut texte paragraphe dans les boutons
+    color:color.$color_main;
+    border-radius: 20px;
+    padding: 2% 5% 2% 5%;
+    background: color.$color_button;
+}

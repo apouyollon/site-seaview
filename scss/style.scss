@@ -1,0 +1,139 @@
+@use 'font';
+@use 'color';
+@use 'button';
+
+@mixin images($size, $circle: false) {
+    width: $size;
+    height: $size;
+    @if $circle {
+    border-radius: $size / 2;
+    }
+    @else {
+    border-radius: 0px;
+    }
+}
+
+body {
+    margin:0%;
+}
+
+header {
+    padding: 2% 3% 2% 3%;
+    background-color: color.$color_secondary;
+}
+
+.bar {
+    margin : 40px 0px 40px 0px;
+    height: 5px;
+    width: 70%;
+    background-color: color.$color_secondary;
+  }
+
+#presentation {
+    padding:  0% 3% 0% 3%;
+}
+
+#section_formation {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#formation {
+    padding-left:3%;
+}
+
+#list_projects {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#list_langages {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#notre_equipe {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 75px;
+}
+
+.equipier {
+    display:flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: rgb(248, 236, 221);
+    margin-bottom: 75px;
+
+    p {
+        font-size: 0.65em;
+    }
+
+    img {
+        @include images(10em, true);
+        align-self: center;
+        margin-top: -20%;
+    }
+}
+
+.equipier_content {
+    padding:5%;
+}
+
+.description_service {
+    padding : 2% 0% 2% 0%;
+    width : 40%;
+}
+
+.section_project {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:350px;
+    margin-bottom: 5%;
+    background-color: color.$color_secondary;
+    border:10px color.$color_secondary solid;
+}
+
+.section_langage {
+    padding: 0% 5% 0% 5%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project_content {
+    padding: 0% 5% 0% 5%;
+}
+
+
+.box_cta {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cta {
+    @include button.cta(10em);
+    margin: 5%;
+}
+
+.cta:hover{ // affiche le bouton en noir et blanc quand survolé
+    background:color.$color_button_hover;
+    color:color.$color_secondary;
+}
+
+.container {
+    padding: 0% 3% 0% 3%; 
+  }
