@@ -181,7 +181,12 @@ body {
 
 header {
   padding: 2% 3% 2% 3%;
-  background-color: #7168c1;
+  background-color: #aca2ff;
+}
+
+#image-accueil img {
+  height: 50px;
+  width: auto;
 }
 
 .bar {
@@ -213,6 +218,24 @@ header {
   height: 21rem;
   border-radius: 10.5rem;
   margin-top: 30px;
+}
+
+.bulle_text {
+  position: relative;
+  margin-top: -80px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  background-color: #7168c1;
+}
+.bulle_text p, .bulle_text .cta {
+  text-align: center;
+  padding: 10px;
+  color: white;
 }
 
 #presentation {
@@ -391,5 +414,5 @@ button[type=submit]:hover {
 }
 
 .container {
-  padding: 0% 3% 0% 3%;
+  padding: 20px 3% 0px 3%;
 }/*# sourceMappingURL=style.css.map */
