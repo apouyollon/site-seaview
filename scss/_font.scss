@@ -2,7 +2,7 @@
 @use 'color';
 
 $font_name_title:Minion Variable Concept;
-$font_name_paragraph:Inter; 
+$font_name_paragraph:'assets/fonts/Inter.ttf'; 
 
 $list_fonts:(
     ("name":"p",
@@ -17,23 +17,29 @@ $list_fonts:(
     "font-weight":normal,
     "color":color.$color_main)
 
+    ("name":"h4",
+    "font-family":$font_name_paragraph,
+    "font-size":1.25rem,
+    "font-weight":normal,
+    "color":color.$color_button)
+
     ("name":"h3",
     "font-family":$font_name_paragraph,
     "font-size":1.5rem,
     "font-weight":normal,
-    "color":color.$color_button_hover)
+    "color":color.$color_button)
 
     ("name":"h2",
     "font-family":$font_name_paragraph,
     "font-size":2rem,
     "font-weight":normal,
-    "color":color.$color_font_dark)
+    "color":color.$color_font_secondary)
     
     ("name":"h1",
     "font-family":$font_name_paragraph,
     "font-size":2.5rem,
     "font-weight":400,
-    "color":color.$color_button_hover)
+    "color":color.$color_button)
 );
 
 @each $object in $list_fonts { //génère automatiquement les attributs css pour les formats de texte

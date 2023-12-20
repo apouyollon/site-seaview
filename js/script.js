@@ -120,6 +120,8 @@ let avis_database = [
 
 
 
+
+
 function show_equipe() {
     for (let e=0; e<equipe_database.length; e++) {
 
@@ -148,16 +150,6 @@ function show_services() {
         `+ services_database[e].nom_service +`</btn>`;
 
         $('#list_btn_services').append(title_service);
-
-        /* let content_service = `
-        <section class='content_service service_`+ services_database[e].id +`'>
-            <p class='service_paragraph'> `+ services_database[e].description_service +`</p>
-            <img class='service_image imageservice_`+ services_database[e].id +`' 
-            onmouseover='change_image_to_mockup(`+ services_database[e].id +`)' 
-            onmouseleave='change_mockup_to_image(`+ services_database[e].id +`)' 
-            src='`+ services_database[e].src_image +`' 
-            alt='`+ services_database[e].alt_image +`'>
-        </section>`; */
 
         let content_service = `
         <section class='content_service service_`+ services_database[e].id +`'>
@@ -188,7 +180,6 @@ function show_description_service(p_id) {
 
 function change_image_to_mockup(p_id) {
     $('.mockupservice_' + p_id).fadeIn(500);
-    console.log('faded');
 }
 
 function change_mockup_to_image(p_id) {
@@ -220,6 +211,55 @@ function submit_form() {
     entrées = null
     */
 }
+
+
+
+
+
+
+
+
+
+// code menu-burger
+
+let showMenu = false;
+
+$(document).ready(function(){
+    $(".menu-btn").on("click", function(){
+        if(!showMenu) {
+            $('.menu-btn__burger').addClass('open');
+            $('.nav').addClass('open');
+            $('.menu-nav').addClass('open');
+            $('.menu-nav__item').addClass('open');
+        
+            showMenu = true;
+            $(".menu-nav__item").on("click", function(){
+                $('.menu-btn__burger').removeClass('open');
+                $('.nav').removeClass('open');
+                $('.menu-nav').removeClass('open');
+                $('.menu-nav__item').removeClass('open');
+            
+                showMenu = false;
+            });
+          } else {
+            $('.menu-btn__burger').removeClass('open');
+            $('.nav').removeClass('open');
+            $('.menu-nav').removeClass('open');
+            $('.menu-nav__item').removeClass('open');
+        
+            showMenu = false;
+          }
+    });
+});
+
+
+
+
+
+
+
+
+
 
 
 show_equipe();

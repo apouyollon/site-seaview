@@ -1,6 +1,7 @@
 @use 'font';
 @use 'color';
 @use 'button';
+@use 'menu';
 
 @mixin images($size, $circle: false) {
     width: $size;
@@ -22,7 +23,6 @@ header {
     background-color: color.$color_secondary;
 }
 
-
 .bar {
     margin : 40px 0px 40px 0px;
     height: 5px;
@@ -30,40 +30,36 @@ header {
     background-color: color.$color_secondary;
   }
 
+.bienvenue-entreprise {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.bienvenue-entreprise-text {
+    width: 450px;
+}
+
+.bienvenue-entreprise-img {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+        @include images(21rem, true);
+        margin-top:30px;
+    } 
+}
+
 #presentation {
     padding:  0% 3% 0% 3%;
     
     p {
         margin-bottom: -20px;
     }
-}
-
-#section_formation {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-#formation {
-    padding-left:3%;
-}
-
-#list_projects {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
-}
-
-#list_langages {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%;
 }
 
 #notre_equipe {
@@ -83,7 +79,11 @@ header {
     border-radius: 15px;
 
     p {
-        font-size: 0.75em;
+        font-size: 0.85em;
+    }
+
+    h4 {
+        margin-top: -20px;
     }
 
     img {
@@ -104,8 +104,8 @@ header {
 .title_service {
     display: inline-block;
     padding: 3px 6px; /* 3px en haut/bas, 6px à gauche/droite */
-    background-color: #282144;
-    color: #fff;
+    background-color: color.$color_button;
+    color: color.$color_main;
     border: none;
     border-radius: 5px;
     text-align: center;
@@ -113,11 +113,11 @@ header {
     font-size: 16px;
     cursor: pointer;
     margin: 5px;
-    padding-top:30px;
+    padding:10px;
 }
     
 .title_service:hover {
-background-color: #7168c1;
+background-color: color.$color_secondary;
 }
 
 #services {
@@ -134,6 +134,13 @@ background-color: #7168c1;
     }
 }
 
+.content_service {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .img_container {
     position: relative;
     width: 28em;
@@ -148,30 +155,13 @@ background-color: #7168c1;
         left: 0;
 }
 
-.content_service {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 .service_paragraph {
     width: 400px;
+    padding-right: 40px;
 }
 
 #list_services {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-#div_mockup {
-    // width:40%;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;   
+    margin: 30px 0px 30px 0px; 
 }
 
 .box_cta {
@@ -186,14 +176,14 @@ background-color: #7168c1;
 }
 
 .cta:hover{ // affiche le bouton en noir et blanc quand survolé
-    background:color.$color_button_hover;
+    background:color.$color_button;
     color:color.$color_secondary;
 }
 
 form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: color.$color_main;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -225,8 +215,8 @@ form {
   }
   
   button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
+    background-color: color.$color_button;
+    color: color.$color_main;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -235,7 +225,7 @@ form {
   }
   
   button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: color.$color_secondary;
   }
 
 .container {
