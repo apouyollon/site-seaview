@@ -68,7 +68,7 @@ h3 {
 h2 {
   font-family: "Concept-Bold";
   font-size: 2rem;
-  font-weight: normal;
+  font-weight: 600;
   color: #5c51c4;
 }
 
@@ -214,7 +214,7 @@ h1 {
     padding-right: 1.5rem;
   }
   .nav .menu-nav__link {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 body {
@@ -266,7 +266,8 @@ address {
   font-style: normal;
 }
 
-#image-accueil img {
+#image-accueil {
+  margin-top: -20px;
   height: 12em;
   width: auto;
 }
@@ -337,6 +338,10 @@ address {
   font-size: 1.25rem;
 }
 
+.add_space {
+  margin-top: 50px;
+}
+
 #notre_equipe {
   display: flex;
   flex-direction: row;
@@ -358,6 +363,8 @@ address {
 }
 .equipier h4 {
   margin-top: -20px;
+  font-size: 1.1em;
+  color: #7168c1;
 }
 .equipier img {
   width: 10em;
@@ -560,7 +567,6 @@ button[type=submit]:hover {
 #horaires {
   display: flex;
   flex-direction: row;
-  margin-left: 30px;
   margin-bottom: 50px;
 }
 #horaires p {
@@ -609,5 +615,5 @@ button[type=submit]:hover {
 }
 
 .container {
-  padding: 20px 5% 0px 5%;
+  padding: 20px 5% 10px 5%;
 }/*# sourceMappingURL=style.css.map */

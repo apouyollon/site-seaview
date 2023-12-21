@@ -191,8 +191,14 @@ function show_services() {
 }
 
 function show_description_service(p_id) {
-    $('.content_service').hide();
-    $('.service_' + p_id).slideToggle(500);
+    for (let e=0; e<services_database.length; e++) {
+        if (e != p_id) {
+            $('.service_' + e).hide();
+        }
+        else {
+            $('.service_' + p_id).slideToggle(500);
+        }     
+    }  
 } 
 
 function change_image_to_mockup(p_id) {
