@@ -35,6 +35,12 @@ $list_fonts:(
     "font-weight":normal,
     "color":color.$color_font_dark)
 
+    ("name":"li",
+    "font-family":$font_name_paragraph,
+    "font-size":1rem,
+    "font-weight":normal,
+    "color":color.$color_font_dark)
+
     ("name":"label",
     "font-family":$font_name_paragraph,
     "font-size":1rem,
