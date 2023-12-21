@@ -11,7 +11,9 @@
 
         <header>
             <section class="container"></section>
-                <section id="logo"></section>
+                <section id="section-logo">
+                    <img id="logo" src="assets/images/logo.svg" alt="Logo Seaview" />
+                </section>
 
                 <div class="menu-btn">
                     <span class="menu-btn__burger"></span>
@@ -34,11 +36,13 @@
             </section>
             <section class="container">
                 <section id="presentation">
-                    <p>Agence web à Vannes</p>
-                    <h1>Seaview réalise votre <div class="color_text">communication digitale</div></h1>
-                </section>
-                <section id="image-accueil">
-                    <img src="assets/images/illustration_header.png" alt="Illustration agence Seaview">
+                    <section id="presentation-text">
+                        <p>Agence web à Vannes</p>
+                        <h1>Seaview réalise votre <br>communication digitale</h1>
+                    </section>
+                    <section id="image-accueil">
+                        <img src="assets/images/illustration_header.png" alt="Illustration agence Seaview" />
+                    </section>
                 </section>
             </section>
             
@@ -88,39 +92,132 @@
         </section>
 
         <section class="container">
-            <h2>Formulaire de Devis </h2>
-            <form action="seaview.php" method="POST">
-                <div class="input-group">
-                    <label for="nom">Nom :</label>
-                    <input type="text" id="nom" name="nom" required>
-                </div>
-                <div class="input-group">
-                    <label for="prenom">Prénom :</label>
-                    <input type="text" id="prenom" name="prenom" required>
-                </div>
-                <div class="input-group">
-                    <label for="nomSociete">Nom de la Société :</label>
-                    <input type="text" id="nomSociete" name="nomSociete" required>
-                </div>
-                <div class="input-group">
-                    <label for="telephone">Téléphone :</label>
-                    <input type="tel" id="telephone" name="telephone">
-                </div>
-                <div class="input-group">
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-group">
-                    <label for="description">Description du Projet :</label>
-                    <textarea id="description" name="description" rows="4" required></textarea>
-                </div>
-                <div class="input-group">
-                    <label for="pieceJointe">Pièce Jointe :</label>
-                    <input type="file" id="pieceJointe" name="pieceJointe" accept=".pdf,.doc,.docx,.txt">
-                </div>
-                <button type="btn">Envoyer</button>
-            </form>      
+            <h2 class="align_center">Témoignages</h2>
+            <section id="temoignages">       
+            </section>
         </section>
+
+        <section class="container">
+            <section id="contact-section">
+                <section id="contact-form">
+                    <h2 id="section-contactform">Formulaire de Devis </h2>
+                    <form action="https://formspree.io/f/mvoepqoo" method="POST">
+                        <div class="input-group">
+                            <label for="nom">Nom : <strong class="form-required">*</strong></label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="prenom">Prénom : <strong class="form-required">*</strong></label>
+                            <input type="text" id="prenom" name="prenom" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="nomSociete">Nom de la Société : <strong class="form-required">*</strong></label>
+                            <input type="text" id="nomSociete" name="nomSociete" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="telephone">Téléphone :</label>
+                            <input type="tel" id="telephone" name="telephone">
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email : <strong class="form-required">*</strong></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="description">Description du Projet : <strong class="form-required">*</strong></label>
+                            <textarea id="description" name="description" rows="4" required></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label for="pieceJointe">Pièce Jointe :</label>
+                            <input type="file" id="pieceJointe" name="pieceJointe" accept=".pdf,.doc,.docx,.txt">
+                        </div>
+                        <div class="input-group">
+                            <p><input type="checkbox" id="confidentialite" name="confidentialite" required>J'ai lu et j'accepte votre <a href="#confidentialite.html">politique de confidentialité</a> <strong class="form-required">*</strong></p>
+                        </div>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </section>  
+                <section id="section-infos-contacts">
+                    <h2>Contact</h2>
+                    <section id="contact-infos">
+                        <h3>Cordonnées</h3>
+                        <address>1 rue Marie Curie, <br>56890 PLESCOP</address>
+                        <p id="telephone">02 02 02 02 02</p>
+                        <a href="" id="mail">contact@seaview.com</a>
+                        
+                        <h3>Horaires</h3>
+                        <section id="horaires">
+
+                            <section class="horaires-jours">
+                                <p>Lundi:</p> 
+                                <p>Mardi:</p>
+                                <p>Mercredi:</p>
+                                <p>Jeudi:</p>
+                                <p>Vendredi:</p>
+                                <p>Samedi:</p>
+                                <p>Dimanche:</p>
+                            </section>
+
+                            <section class="horaires-heures">
+                                <p>9h00 - 18h00</p> 
+                                <p>9h00 - 18h00 </p>
+                                <p>9h00 - 18h00 </p>
+                                <p>9h00 - 18h00 </p>
+                                <p>9h00 - 18h00 </p>
+                                <p>Fermé</p>
+                                <p>Fermé</p>
+                            </section>
+                        </section>
+
+                        <h3>Réseaux sociaux</h3>
+                        <section id="social_medias"></section>
+                    </section>
+                </section> 
+            </section>
+        </section>
+
+        <footer>
+            <section id="footer_horaires">
+                <section class="horaires-jours">
+                    <p>Lundi:</p> 
+                    <p>Mardi:</p>
+                    <p>Mercredi:</p>
+                    <p>Jeudi:</p>
+                    <p>Vendredi:</p>
+                    <p>Samedi:</p>
+                    <p>Dimanche:</p>
+                </section>
+
+                <section class="horaires-heures">
+                    <p>9h00 - 18h00</p> 
+                    <p>9h00 - 18h00 </p>
+                    <p>9h00 - 18h00 </p>
+                    <p>9h00 - 18h00 </p>
+                    <p>9h00 - 18h00 </p>
+                    <p>Fermé</p>
+                    <p>Fermé</p>
+                </section>
+            </section>
+            <section id="footer_cordonnees">
+                <address>1 rue Marie Curie, <br>56890 PLESCOP</address>
+                        <p id="telephone">02 02 02 02 02</p>
+                        <a href="" id="mail">contact@seaview.com</a>
+            </section>
+            <section id="footer_nav">
+                <nav id="nav_footer">
+                    <ul id="list_menu_footer">
+                        <li class="nav_footer_elem">
+                            <a href="#mentions_legales.html">Mentions légales</a>
+                        </li>
+                        <li class="nav_footer_elem">
+                            <a href="#confidentialite.html">Politique de confidentialité</a>
+                        </li>
+                        <li class="nav_footer_elem">
+                            <a href="#cgu.html">Conditions générales d'utilisation</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </footer>
 
 
         <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>

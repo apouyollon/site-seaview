@@ -1,4 +1,5 @@
 @use 'color';
+@use 'font';
 
 @mixin transition-ease {
     transition: all 0.5s ease-in-out;
@@ -69,7 +70,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 98vw;
+    width: 96vw;
     opacity: 0.98;
     visibility: hidden;
   
@@ -84,7 +85,7 @@
       justify-content: center;
       height: 100vh;
       overflow: hidden;
-      background: rgba(117, 109, 128, 0.95);
+      background: rgba(156, 146, 172, 0.95);
 
       list-style-type: none;
       padding-right: 1rem;
@@ -97,6 +98,9 @@
   
       &__item {
         transform: translateX(100vw);
+        font-size: 1rem;
+        font-weight: 300;
+        font-family: font.$font_name_paragraph;
         @include transition-ease;
   
         &.open {
@@ -106,11 +110,12 @@
   
       &__link {
         display: inline-block;
-        font-size: 1rem;
+        font-family: font.$font_name_paragraph;
+        font-size: 0.75rem;
         text-decoration: none;
         color: color.$color_button;
         padding: 2rem 0;
-        font-weight: 300;
+        font-weight: 400;
         @include transition-ease;
   
         &:hover {

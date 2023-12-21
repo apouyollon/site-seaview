@@ -1,41 +1,67 @@
 @charset "UTF-8";
-p, .cta {
-  font-family: "assets/fonts/Inter.ttf";
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("assets/fonts/Inter/static/Inter-Regular.ttf");
+}
+p {
+  font-family: "Inter";
   font-size: 1rem;
   font-weight: normal;
   color: black;
 }
 
+address {
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: normal;
+  color: black;
+}
+
+a {
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: normal;
+  color: black;
+}
+
+label {
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+}
+
 .description {
-  font-family: "assets/fonts/Inter.ttf";
+  font-family: "Inter";
   font-size: 0.75rem;
   font-weight: normal;
   color: white;
 }
 
 h4 {
-  font-family: "assets/fonts/Inter.ttf";
+  font-family: "Inter";
   font-size: 1.25rem;
   font-weight: normal;
   color: #282144;
 }
 
 h3 {
-  font-family: "assets/fonts/Inter.ttf";
+  font-family: "Inter";
   font-size: 1.5rem;
   font-weight: normal;
   color: #282144;
 }
 
 h2 {
-  font-family: "assets/fonts/Inter.ttf";
+  font-family: "Inter";
   font-size: 2rem;
   font-weight: normal;
   color: #5c51c4;
 }
 
 h1 {
-  font-family: "assets/fonts/Inter.ttf";
+  font-family: "Inter";
   font-size: 2.5rem;
   font-weight: 400;
   color: #282144;
@@ -94,7 +120,7 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 98vw;
+  width: 96vw;
   opacity: 0.98;
   visibility: hidden;
 }
@@ -108,7 +134,7 @@ h1 {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  background: rgba(117, 109, 128, 0.95);
+  background: rgba(156, 146, 172, 0.95);
   list-style-type: none;
   padding-right: 1rem;
   transform: translateY(-100%);
@@ -119,6 +145,9 @@ h1 {
 }
 .nav .menu-nav__item {
   transform: translateX(100vw);
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Inter";
   transition: all 0.5s ease-in-out;
 }
 .nav .menu-nav__item.open {
@@ -126,11 +155,12 @@ h1 {
 }
 .nav .menu-nav__link {
   display: inline-block;
-  font-size: 1rem;
+  font-family: "Inter";
+  font-size: 0.75rem;
   text-decoration: none;
   color: #282144;
   padding: 2rem 0;
-  font-weight: 300;
+  font-weight: 400;
   transition: all 0.5s ease-in-out;
 }
 .nav .menu-nav__link:hover {
@@ -181,11 +211,37 @@ body {
 
 header {
   padding: 2% 3% 2% 3%;
-  background-color: #aca2ff;
+  background-color: #bcb5ff;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2% 3% 2% 3%;
+  background-color: #282144;
+}
+footer p {
+  color: white;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  color: #bcb5ff;
+}
+footer address {
+  color: white;
+}
+
+address {
+  font-style: normal;
 }
 
 #image-accueil img {
-  height: 50px;
+  height: 12em;
   width: auto;
 }
 
@@ -194,6 +250,11 @@ header {
   height: 5px;
   width: 70%;
   background-color: #7168c1;
+}
+
+#logo {
+  height: 3em;
+  width: auto;
 }
 
 .bienvenue-entreprise {
@@ -232,17 +293,22 @@ header {
   border-radius: 60px;
   background-color: #7168c1;
 }
-.bulle_text p, .bulle_text .cta {
+.bulle_text p {
   text-align: center;
   padding: 10px;
   color: white;
 }
 
 #presentation {
-  padding: 0% 3% 0% 3%;
+  padding: 5% 3% 0% 3%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-#presentation p, #presentation .cta {
-  margin-bottom: -20px;
+#presentation p {
+  margin-bottom: -40px;
+  font-size: 1.25rem;
 }
 
 #notre_equipe {
@@ -261,7 +327,7 @@ header {
   margin-bottom: 75px;
   border-radius: 15px;
 }
-.equipier p, .equipier .cta {
+.equipier p {
   font-size: 0.85em;
 }
 .equipier h4 {
@@ -273,6 +339,8 @@ header {
   border-radius: 5em;
   align-self: center;
   margin-top: -20%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .equipier_content {
@@ -292,7 +360,8 @@ header {
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-family: "Inter";
+  font-size: 14px;
   cursor: pointer;
   margin: 5px;
   padding: 10px;
@@ -345,29 +414,50 @@ header {
   margin: 30px 0px 30px 0px;
 }
 
-.box_cta {
+#temoignages {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 75px;
 }
 
-.cta {
-  text-decoration: none;
-  color: white;
-  border-radius: 20px;
-  padding: 2% 5% 2% 5%;
-  background: #282144;
-  margin: 5%;
+.avis {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 2%;
+  background-color: rgba(188, 181, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 75px;
+  border-radius: 15px;
 }
 
-.cta:hover {
-  background: #282144;
-  color: #7168c1;
+.user-images {
+  width: 6em;
+  height: 6em;
+  border-radius: 3em;
+  align-self: center;
+  margin-top: -20%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-etoiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.star {
+  width: 25px;
+  height: auto;
+  padding: 2px;
 }
 
 form {
   max-width: 600px;
-  margin: 0 auto;
   background-color: white;
   padding: 20px;
   border-radius: 8px;
@@ -411,6 +501,81 @@ button[type=submit] {
 
 button[type=submit]:hover {
   background-color: #7168c1;
+}
+
+.form-required {
+  color: rgb(195, 0, 0);
+}
+
+#contact-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+
+#contact-form {
+  width: 800px;
+  margin-right: 50px;
+}
+
+#contact-infos {
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#horaires {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+#horaires p {
+  margin-bottom: -10px;
+}
+
+.horaires-jours {
+  margin-top: -15px;
+}
+
+.horaires-heures {
+  margin-top: -15px;
+  margin-left: 20px;
+}
+
+#social_medias {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-medias-icons {
+  height: 50px;
+  width: auto;
+}
+
+.social-medias-icons:hover {
+  transform: scale(1.2);
+}
+
+#footer_horaires {
+  display: flex;
+  flex-direction: row;
+}
+#footer_horaires p {
+  margin-bottom: -10px;
+}
+
+#nav_footer ul {
+  list-style-type: none;
+}
+#nav_footer li {
+  padding-bottom: 25px;
 }
 
 .container {

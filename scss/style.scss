@@ -23,9 +23,39 @@ header {
     background-color: color.$color_header;
 }
 
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2% 3% 2% 3%;
+    background-color: color.$color_button;
+
+    p {
+        color:color.$color_main
+    }
+
+    a {
+        text-decoration: none;
+        color:color.$color_main
+    }
+
+    a:hover {
+        color:color.$color_header;
+    }
+
+    address {
+        color:color.$color_main
+    }
+}
+
+address {
+    font-style: normal;
+}
+
 #image-accueil {
     img{
-    height:50px;
+    height:12em;
     width:auto;
     }
 }
@@ -36,6 +66,11 @@ header {
     width: 70%;
     background-color: color.$color_secondary;
   }
+
+#logo {
+    height:3em;
+    width:auto;
+}
 
 .bienvenue-entreprise {
     display:flex;
@@ -63,8 +98,6 @@ header {
 
 .bulle_text {
     position: relative;
-    // top: 0;
-    // left: 0;
     margin-top: -80px;
     display:flex;
     flex-direction: column;
@@ -83,10 +116,15 @@ header {
 }
 
 #presentation {
-    padding:  0% 3% 0% 3%;
+    padding:  5% 3% 0% 3%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     
     p {
-        margin-bottom: -20px;
+        margin-bottom: -40px;
+        font-size: 1.25rem;
     }
 }
 
@@ -118,6 +156,7 @@ header {
         @include images(10em, true);
         align-self: center;
         margin-top: -20%;
+        object-fit: cover;
     }
 }
 
@@ -138,7 +177,8 @@ header {
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-family: font.$font_name_paragraph;
+    font-size: 14px;
     cursor: pointer;
     margin: 5px;
     padding:10px;
@@ -192,25 +232,47 @@ background-color: color.$color_secondary;
     margin: 30px 0px 30px 0px; 
 }
 
-.box_cta {
+#temoignages {
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 75px;
 }
 
-.cta {
-    @include button.cta(10em);
-    margin: 5%;
+.avis {
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 2%;
+    background-color: rgba(188, 181, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 75px;
+    border-radius: 15px;
 }
 
-.cta:hover{ // affiche le bouton en noir et blanc quand survolé
-    background:color.$color_button;
-    color:color.$color_secondary;
+.user-images {
+    @include images(6em, true);
+    align-self: center;
+    margin-top: -20%;
+    object-fit: cover;
+}
+
+.section-etoiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.star {
+    width: 25px;
+    height: auto;
+    padding: 2px;
 }
 
 form {
     max-width: 600px;
-    margin: 0 auto;
     background-color: color.$color_main;
     padding: 20px;
     border-radius: 8px;
@@ -254,6 +316,81 @@ form {
   
   button[type="submit"]:hover {
     background-color: color.$color_secondary;
+  }
+
+  .form-required {
+    color: rgb(195, 0, 0);
+  }
+
+  #contact-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+
+  #contact-form {
+    width: 800px;
+    margin-right: 50px;
+  }
+
+  #contact-infos {
+    max-width: 600px;
+    background-color: color.$color_main;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #horaires {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-bottom: 50px;
+
+    p {
+        margin-bottom: -10px;
+    }
+  }
+
+  .horaires-jours {
+    margin-top: -15px;
+  }
+
+  .horaires-heures {
+    margin-top: -15px;
+    margin-left: 20px; 
+}
+
+#social_medias {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+  .social-medias-icons {
+    height: 50px;
+    width: auto;
+  }
+
+  .social-medias-icons:hover {
+    transform: scale(1.2);
+  }
+
+  #footer_horaires {
+    display: flex;
+    flex-direction: row;
+
+    p {
+        margin-bottom: -10px;
+    }
+  }
+
+  #nav_footer {
+    ul {list-style-type: none;}
+    li {padding-bottom:25px;}
   }
 
 .container {

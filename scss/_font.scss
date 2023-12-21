@@ -1,14 +1,38 @@
 @use 'sass:map';
 @use 'color';
 
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    src: url('assets/fonts/Inter/static/Inter-Regular.ttf');
+}
+
 $font_name_title:Minion Variable Concept;
-$font_name_paragraph:'assets/fonts/Inter.ttf'; 
+$font_name_paragraph:'Inter'; 
 
 $list_fonts:(
     ("name":"p",
     "font-family":$font_name_paragraph,
     "font-size":1rem,
     "font-weight":normal,
+    "color":color.$color_font_dark)
+
+    ("name":"address",
+    "font-family":$font_name_paragraph,
+    "font-size":1rem,
+    "font-weight":normal,
+    "color":color.$color_font_dark)
+
+    ("name":"a",
+    "font-family":$font_name_paragraph,
+    "font-size":1rem,
+    "font-weight":normal,
+    "color":color.$color_font_dark)
+
+    ("name":"label",
+    "font-family":$font_name_paragraph,
+    "font-size":1rem,
+    "font-weight":500,
     "color":color.$color_font_dark)
 
     ("name":".description",
