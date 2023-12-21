@@ -203,7 +203,8 @@ address {
 }
     
 .title_service:hover {
-background-color: color.$color_secondary;
+    color: color.$color_main;
+    background-color: color.$color_secondary;
 }
 
 #services {

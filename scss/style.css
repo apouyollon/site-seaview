@@ -401,6 +401,7 @@ address {
 }
 
 .title_service:hover {
+  color: white;
   background-color: #7168c1;
 }
 

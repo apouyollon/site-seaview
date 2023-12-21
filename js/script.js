@@ -96,7 +96,7 @@ let avis_database = [
         'id': 0
     },
     {
-        'photo_avis': 'assets/clients/user.png',
+        'photo_avis': 'assets/clients/user2.svg',
         'titre_avis': 'Une équipe communicative',
         'avis': "L'équipe de Seaview est accueillante. Ils prennent le temps de vous expliquer leurs choix et comment utiliser exploiter judicieusement leurs livrables.",
         'nom_client': 'Rémi L.',
@@ -104,7 +104,7 @@ let avis_database = [
         'id': 1
     },
     {
-        'photo_avis': 'assets/clients/user.png',
+        'photo_avis': 'assets/clients/user1.svg',
         'titre_avis': 'De bonnes idées',
         'avis': "Je ne regrette pas d'avoir confié un projet à Seaview, ils ont été réactifs, avaient de bonnes idées. Je les recommande.",
         'nom_client': 'Sébastien A.',
