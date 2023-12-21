@@ -7,7 +7,13 @@
     src: url('assets/fonts/Inter/static/Inter-Regular.ttf');
 }
 
-$font_name_title:Minion Variable Concept;
+@font-face {
+    font-family: 'Concept-Bold';
+    font-weight: 400;
+    src: url('assets/fonts/Concept-Bold/Concept-Bold.ttf');
+}
+
+$font_name_title:'Concept-Bold';
 $font_name_paragraph:'Inter'; 
 
 $list_fonts:(
@@ -54,7 +60,7 @@ $list_fonts:(
     "color":color.$color_button)
 
     ("name":"h2",
-    "font-family":$font_name_paragraph,
+    "font-family":$font_name_title,
     "font-size":2rem,
     "font-weight":normal,
     "color":color.$color_font_secondary)

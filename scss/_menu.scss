@@ -98,7 +98,7 @@
   
       &__item {
         transform: translateX(100vw);
-        font-size: 1rem;
+        font-size: 1em;
         font-weight: 300;
         font-family: font.$font_name_paragraph;
         @include transition-ease;
@@ -111,7 +111,7 @@
       &__link {
         display: inline-block;
         font-family: font.$font_name_paragraph;
-        font-size: 0.75rem;
+        font-size: 1em;
         text-decoration: none;
         color: color.$color_button;
         padding: 2rem 0;
