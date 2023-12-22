@@ -245,6 +245,13 @@ function show_socialmedias() {
 }
 
 
+const helmet = require("helmet");
+const app = express();
+app.use(
+  helmet({
+    xFrameOptions: { action: "sameorigin" },
+  }),
+);
 
 
 // code menu-burger
